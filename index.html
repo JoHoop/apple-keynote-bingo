@@ -152,39 +152,19 @@
                     }
                     else {
                         el_cell.innerHTML = shuffled_strings.pop();
-                        el_cell.addEventListener('click', mark_cell, false);
+                        el_cell.addEventListener('click', mark_cell, true);
                     }
                 }
             }
 
-            var bingo_counter = 0;
-
-            var marked_sound = new Audio('static/sounds/eep.wav');
-            marked_sound.load();
-            var bingo_sound = new Audio('static/sounds/indigo.wav');
-            bingo_sound.load();
-
             function mark_cell(cell) {
                 cell.srcElement.removeEventListener('click', mark_cell);
-                cell.srcElement.classList.add('marked');
-                bingo_counter++;
-
-                if(bingo_counter === 24) {
-                    document.querySelectorAll('td').forEach(function (e) {
-                        e.classList.add('rotate-out');
-                    });
-                    bingo_sound.play();
-                    window.setTimeout(function() {
-                        play_again = document.getElementById('bingo');
-                        play_again.classList.add('bounce-in');
-                        play_again.style.display = 'block';
-
-                        bingoCard = document.getElementById('bingoCard');
-                        bingoCard.style.visibility = 'hidden';
-                    }, 400);
-                }
-                else {
-                    marked_sound.play();
+                if (cell.srcElement.classList.contains('marked')) {
+                    console.log("marked");
+                    cell.srcElement.classList.remove('marked');
+                } else {
+                    console.log("not marked");
+                    cell.srcElement.classList.add('marked');
                 }
             }
         </script>
