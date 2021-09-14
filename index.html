@@ -11,7 +11,7 @@
         <meta property="og:site_name" content="Apple Keynote Bingo!" />
         <meta property="og:url" content="https://apple-keynote-bingo.vercel.app/" />
         <meta property="og:description" content="It’s time to play Apple Keynote Bingo!" />
-        <meta property="og:image" content="static/images/share.jpg" />
+        <meta property="og:image" content="static/images/share.png" />
 
         <link rel="stylesheet" href="static/styles/styles.css">
         <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
@@ -125,7 +125,6 @@
                 for(var col = 0; col < 5; col += 1) {
                     el_cell = el_row.insertCell(0);
                     if(row == 2 && col == 2) {
-                        el_cell.innerHTML = 'Free<br /><br /><br />Space';
                         el_cell.classList.add('marked');
                         el_cell.classList.add('marked-free');
                     }

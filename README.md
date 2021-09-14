@@ -2,4 +2,4 @@
 
 Our snarky bingo game for Apple Keynotes.
 
-![Screenshot](https://keynotebingo.github.io/static/images/share.jpg)
+![Screenshot](https://apple-keynote-bingo.vercel.app/share.png)
