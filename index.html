@@ -139,10 +139,8 @@
             function mark_cell(cell) {
                 cell.srcElement.removeEventListener('click', mark_cell);
                 if (cell.srcElement.classList.contains('marked')) {
-                    console.log("marked");
                     cell.srcElement.classList.remove('marked');
                 } else {
-                    console.log("not marked");
                     cell.srcElement.classList.add('marked');
                 }
             }
